@@ -1,5 +1,29 @@
 local is_not_nixos = not (vim.uv or vim.loop).fs_stat("/run/current-system/sw/bin")
 
+local tsserver_common_settings = {
+  inlayHints = {
+    includeInlayParameterNameHints = "all",
+    includeInlayFunctionParameterTypeHints = true,
+    includeInlayVariableTypeHints = true,
+    includeInlayPropertyDeclarationTypeHints = true,
+    includeInlayFunctionLikeReturnTypeHints = true,
+    includeInlayEnumMemberValueHints = true,
+  },
+  implicitProjectConfiguration = {
+    completeFunctionCalls = true,
+    checkJs = true,
+  },
+  format = {
+    insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces = true,
+    semicolons = "insert",
+  },
+}
+local tsserver_settings = {}
+
+for _, language in ipairs({ "javascript", "typescript" }) do
+  tsserver_settings[language] = tsserver_common_settings
+end
+
 return {
   {
     "nvim-treesitter/nvim-treesitter",
@@ -113,6 +137,9 @@ return {
               },
             },
           },
+        },
+        tsserver = {
+          settings = tsserver_settings,
         },
         marksman = {
           mason = is_not_nixos,
