@@ -24,19 +24,4 @@ return {
       },
     },
   },
-  {
-    "echasnovski/mini.comment",
-    event = "VeryLazy",
-    keys = {
-      {
-        mode = { "i" },
-        "<C-/>",
-        function()
-          local line_number = vim.api.nvim_win_get_cursor(0)[1]
-          MiniComment.toggle_lines(line_number, line_number)
-        end,
-        desc = "Comment line",
-      },
-    },
-  },
 }
