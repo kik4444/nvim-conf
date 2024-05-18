@@ -98,6 +98,15 @@ return {
           mason = is_not_nixos,
           settings = {
             gopls = {
+              hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
               analyses = {
                 unusedvariable = true,
                 shadow = true,
