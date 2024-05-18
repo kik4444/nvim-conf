@@ -286,6 +286,6 @@ return {
   },
 }
 
--- Puppet manual setup:
+-- NOTE Puppet manual setup:
 -- Follow instructions: https://github.com/puppetlabs/puppet-editor-services?tab=readme-ov-file#setting-up-editor-services-for-development
 -- gem install puppet-lint puppet-lint-strict_indent-check puppet-lint-manifest_whitespace-check puppet-lint-unquoted_string-check puppet-lint-leading_zero-check puppet-lint-absolute_classname-check puppet-lint-trailing_comma-check puppet-lint-file_ensure-check puppet-lint-legacy_facts-check
