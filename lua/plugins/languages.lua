@@ -184,6 +184,15 @@ return {
             { mode = { "n" }, "<leader>ccD", require("crates").open_documentation, desc = "Open Documentation" },
             { mode = { "n" }, "<leader>ccC", require("crates").open_crates_io, desc = "Open Crates io" },
           },
+          settings = {
+            formatter = {
+              alignEntries = false, -- Best to avoid because changing one value or key name cascades into changes on the neighboring lines
+              alignComments = true,
+              arrayTrailngComma = true,
+              arrayAutoCollapse = true,
+              arrayAutoExpand = true,
+            },
+          },
         },
         puppet = {
           cmd = { "puppet-languageserver", "--stdio" },
