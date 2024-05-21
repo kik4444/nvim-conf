@@ -58,6 +58,7 @@ return {
         "html-lsp",
         "css-lsp",
         "emmet-language-server",
+        "clang-format", -- Used for protobufs
       },
     },
   },
@@ -71,6 +72,7 @@ return {
       formatters_by_ft = {
         groovy = { "npm-groovy-lint" },
         puppet = { "puppet-lint" },
+        proto = { "clang-format" },
       },
       formatters = {
         shfmt = {
@@ -85,6 +87,14 @@ return {
           command = "puppet-lint",
           args = { "--fix", "$FILENAME" },
           stdin = false,
+        },
+        ["clang-format"] = {
+          command = "clang-format",
+          args = {
+            "--assume-filename=a.proto",
+            "--style",
+            "{BasedOnStyle: Google, IndentWidth: " .. vim.opt.shiftwidth:get() .. "}",
+          },
         },
       },
     },
@@ -197,6 +207,7 @@ return {
         puppet = {
           cmd = { "puppet-languageserver", "--stdio" },
         },
+        pbls = {}, -- Protobuf
       },
       setup = {
         nu_ls = function()

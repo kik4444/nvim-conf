@@ -22,6 +22,11 @@ Mason only provides wrappers over `solargraph` and `rubocop`. They must also be 
 Follow these instructions: https://github.com/puppetlabs/puppet-editor-services#setting-up-editor-services-for-development
 
 Then install the following gems for extra linting and formatting:
+
 ```bash
 gem install puppet-lint puppet-lint-strict_indent-check puppet-lint-manifest_whitespace-check puppet-lint-unquoted_string-check puppet-lint-leading_zero-check puppet-lint-absolute_classname-check puppet-lint-trailing_comma-check puppet-lint-file_ensure-check puppet-lint-legacy_facts-check
 ```
+
+## Protobuf
+
+Until `pbls` or another language server is added to Mason and Nix, ensure `protoc` is in your $PATH and install `pbls` from `cargo install --git https://git.sr.ht/~rrc/pbls`
