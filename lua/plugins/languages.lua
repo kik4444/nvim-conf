@@ -115,6 +115,10 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    keys = {
+      { mode = { "n" }, "<leader>cL", vim.cmd.LspLog, desc = "Lsp log" },
+      { mode = { "n" }, "<leader>cR", vim.cmd.LspRestart, desc = "Lsp restart" },
+    },
     opts = {
       servers = {
         nu_ls = {}, -- Required
