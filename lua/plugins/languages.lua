@@ -120,6 +120,9 @@ return {
       { mode = { "n" }, "<leader>cR", vim.cmd.LspRestart, desc = "Lsp restart" },
     },
     opts = {
+      codelens = {
+        enabled = true,
+      },
       servers = {
         nu_ls = {}, -- Required
         nil_ls = {
