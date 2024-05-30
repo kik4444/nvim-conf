@@ -164,42 +164,40 @@ return {
         taplo = {
           keys = {
             { mode = { "n" }, "<leader>K", require("crates").show_popup, desc = "Show Crate Documentation" },
-            { mode = { "n" }, "<leader>cct", require("crates").toggle, desc = "Toggle Crates" },
-            { mode = { "n" }, "<leader>ccr", require("crates").reload, desc = "Reload crates" },
+            { mode = { "n" }, "<leader>ctt", require("crates").toggle, desc = "Toggle Crates" },
+            { mode = { "n" }, "<leader>ctr", require("crates").reload, desc = "Reload crates" },
 
-            { mode = { "n" }, "<leader>ccv", require("crates").show_versions_popup, desc = "Show Versions Popup" },
-            { mode = { "n" }, "<leader>ccf", require("crates").show_features_popup, desc = "Show Features Popup" },
+            { mode = { "n" }, "<leader>ctv", require("crates").show_versions_popup, desc = "Show Versions Popup" },
+            { mode = { "n" }, "<leader>ctf", require("crates").show_features_popup, desc = "Show Features Popup" },
             {
               mode = { "n" },
-              "<leader>ccd",
+              "<leader>ctd",
               require("crates").show_dependencies_popup,
               desc = "Show Dependencies Popup",
             },
 
-            { mode = { "n" }, "<leader>ccu", require("crates").update_crate, desc = "Update Crate" },
-            { mode = { "v" }, "<leader>ccu", require("crates").update_crates, desc = "Update Crates" },
-            { mode = { "n" }, "<leader>cca", require("crates").update_all_crates, desc = "Update All Crates" },
-            { mode = { "n" }, "<leader>ccU", require("crates").upgrade_crate, desc = "Upgrade Crate" },
-            { mode = { "v" }, "<leader>ccU", require("crates").upgrade_crates, desc = "Upgrade Crates" },
-            { mode = { "n" }, "<leader>ccA", require("crates").upgrade_all_crates, desc = "Upgrade All Crates" },
+            { mode = { "n", "v" }, "<leader>ctu", require("crates").update_crate, desc = "Update Crate" },
+            { mode = { "n" }, "<leader>cta", require("crates").update_all_crates, desc = "Update All Crates" },
+            { mode = { "n", "v" }, "<leader>ctU", require("crates").upgrade_crate, desc = "Upgrade Crate" },
+            { mode = { "n" }, "<leader>ctA", require("crates").upgrade_all_crates, desc = "Upgrade All Crates" },
 
             {
               mode = { "n" },
-              "<leader>ccx",
+              "<leader>ctx",
               require("crates").expand_plain_crate_to_inline_table,
               desc = "Expand Plain Crate To Inline Table",
             },
             {
               mode = { "n" },
-              "<leader>ccX",
+              "<leader>ctX",
               require("crates").extract_crate_into_table,
               desc = "Extract Crate Into Table",
             },
 
-            { mode = { "n" }, "<leader>ccH", require("crates").open_homepage, desc = "Open Homepage" },
-            { mode = { "n" }, "<leader>ccR", require("crates").open_repository, desc = "Open Repository" },
-            { mode = { "n" }, "<leader>ccD", require("crates").open_documentation, desc = "Open Documentation" },
-            { mode = { "n" }, "<leader>ccC", require("crates").open_crates_io, desc = "Open Crates io" },
+            { mode = { "n" }, "<leader>ctH", require("crates").open_homepage, desc = "Open Homepage" },
+            { mode = { "n" }, "<leader>ctR", require("crates").open_repository, desc = "Open Repository" },
+            { mode = { "n" }, "<leader>ctD", require("crates").open_documentation, desc = "Open Documentation" },
+            { mode = { "n" }, "<leader>ctC", require("crates").open_crates_io, desc = "Open Crates io" },
           },
           settings = {
             formatter = {
