@@ -1,27 +1,37 @@
 local is_not_nixos = not (vim.uv or vim.loop).fs_stat("/run/current-system/sw/bin")
 
-local tsserver_common_settings = {
-  inlayHints = {
-    includeInlayParameterNameHints = "all",
-    includeInlayFunctionParameterTypeHints = true,
-    includeInlayVariableTypeHints = true,
-    includeInlayPropertyDeclarationTypeHints = true,
-    includeInlayFunctionLikeReturnTypeHints = true,
-    includeInlayEnumMemberValueHints = true,
+-- https://github.com/yioneko/vtsls/blob/main/packages/service/configuration.schema.json
+local ts_js_common_settings = {
+  referencesCodeLens = {
+    enabled = true,
+    showOnAllFunctions = true,
   },
-  implicitProjectConfiguration = {
+  implementationsCodeLens = {
+    enabled = true,
+    showOnInterfaceMethods = true,
+  },
+  suggest = {
     completeFunctionCalls = true,
-    checkJs = true,
+    includeAutomaticOptionalChainCompletions = true,
+  },
+  inlayHints = {
+    parameterNames = { enabled = "all" },
+    parameterTypes = { enabled = true },
+    variableTypes = { enabled = true },
+    propertyDeclarationTypes = { enabled = true },
+    functionLikeReturnTypes = { enabled = true },
+    enumMemberValues = { enabled = true },
   },
   format = {
     insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces = true,
     semicolons = "insert",
   },
+  implicitProjectConfig = { checkJs = true },
 }
-local tsserver_settings = {}
+local ts_js_settings = {}
 
 for _, language in ipairs({ "javascript", "typescript" }) do
-  tsserver_settings[language] = tsserver_common_settings
+  ts_js_settings[language] = ts_js_common_settings
 end
 
 return {
@@ -155,8 +165,8 @@ return {
             },
           },
         },
-        tsserver = {
-          settings = tsserver_settings,
+        vtsls = {
+          settings = ts_js_settings,
         },
         marksman = {
           mason = is_not_nixos,
