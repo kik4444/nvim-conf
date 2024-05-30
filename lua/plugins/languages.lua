@@ -117,7 +117,7 @@ return {
     "neovim/nvim-lspconfig",
     keys = {
       { mode = { "n" }, "<leader>cL", vim.cmd.LspLog, desc = "Lsp log" },
-      { mode = { "n" }, "<leader>cR", vim.cmd.LspRestart, desc = "Lsp restart" },
+      { mode = { "n" }, "<leader>cQ", vim.cmd.LspRestart, desc = "Lsp restart" },
     },
     opts = {
       codelens = {
@@ -254,7 +254,7 @@ return {
           vim.keymap.set("n", "<leader>cM", "<cmd>RustLsp expandMacro<cr>", { desc = "Expand Macro", buffer = bufnr })
           vim.keymap.set("n", "<leader>cD", "<cmd>RustLsp openDocs<cr>", { desc = "Open Docs", buffer = bufnr })
           vim.keymap.set("n", "<leader>cL", "<cmd>RustLsp logFile<cr>", { desc = "Open LSP log file" })
-          vim.keymap.set("n", "<leader>cR", "<cmd>RustAnalyzer restart<cr>", { desc = "Restart rust analyzer" })
+          vim.keymap.set("n", "<leader>cQ", "<cmd>RustAnalyzer restart<cr>", { desc = "Restart rust analyzer" })
         end,
         default_settings = {
           ["rust-analyzer"] = {
