@@ -7,3 +7,6 @@ vim.keymap.set("n", "U", "<C-r>")
 
 -- Deindent in insert mode with Shift + Tab
 vim.keymap.set("i", "<S-Tab>", "<C-d>")
+
+-- Delete marks
+vim.keymap.set("n", "M", "<cmd>delmarks!<cr>", { desc = "Delete marks" })
