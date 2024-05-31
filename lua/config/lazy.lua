@@ -14,6 +14,8 @@ require("lazy").setup({
     -- import any extras modules here
     -- { import = "lazyvim.plugins.extras.lsp.none-ls" },
 
+    { import = "lazyvim.plugins.extras.editor.illuminate" },
+
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
 
