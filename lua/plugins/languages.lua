@@ -63,7 +63,7 @@ return {
         "bash-language-server",
         "shellcheck",
         "hadolint", -- Dockerfile linter
-        "npm-groovy-lint",
+        "npm-groovy-lint", -- Mainly used for Jenkinsfile
         "puppet-editor-services", -- Puppet language server
         "html-lsp",
         "css-lsp",
@@ -114,7 +114,7 @@ return {
     event = "VeryLazy",
     opts = {
       linters_by_ft = {
-        -- groovy = { "npm-groovy-lint" }, -- FIXME temp stopped
+        groovy = { "npm-groovy-lint" },
       },
       linters = {
         ["npm-groovy-lint"] = {
