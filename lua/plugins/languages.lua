@@ -148,7 +148,9 @@ return {
         gopls = {
           mason = is_not_nixos,
           settings = {
+            -- https://github.com/golang/tools/blob/master/gopls/doc/settings.md
             gopls = {
+              usePlaceholders = false,
               hints = {
                 assignVariableTypes = true,
                 compositeLiteralFields = true,
