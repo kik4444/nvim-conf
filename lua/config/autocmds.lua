@@ -41,7 +41,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- "//" comments
 vim.api.nvim_create_autocmd("FileType", {
   group = vim.api.nvim_create_augroup("// comments", { clear = true }),
-  pattern = { "jsonc" },
+  pattern = { "jsonc", "proto" },
   callback = function(ev)
     vim.bo[ev.buf].commentstring = "// %s"
   end,
