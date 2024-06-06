@@ -8,7 +8,6 @@ return {
     opts = {
       defaults = {
         wrap_results = true,
-        scroll_strategy = "limit",
         layout_config = {
           width = 0.99,
           height = 0.95,
