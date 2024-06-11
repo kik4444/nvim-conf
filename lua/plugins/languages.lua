@@ -53,6 +53,9 @@ return {
         "css",
         "rasi",
         "proto",
+        "elixir",
+        "heex",
+        "eex",
       },
     },
   },
@@ -69,6 +72,7 @@ return {
         "css-lsp",
         "emmet-language-server",
         "clang-format", -- Used for protobufs
+        "elixir-ls",
       },
     },
   },
