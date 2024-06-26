@@ -18,6 +18,7 @@ vim.filetype.add({
     nu = "nu",
     job = "yaml", -- Used in palerts
     rasi = "rasi",
+    alloy = "hcl",
   },
   filename = {
     ["flake.lock"] = "json",

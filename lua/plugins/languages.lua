@@ -53,6 +53,7 @@ return {
         "css",
         "rasi",
         "proto",
+        "hcl",
       },
     },
   },
