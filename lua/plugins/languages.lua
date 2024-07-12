@@ -54,6 +54,7 @@ return {
         "rasi",
         "proto",
         "hcl",
+        "zig",
       },
     },
   },
@@ -70,6 +71,7 @@ return {
         "css-lsp",
         "emmet-language-server",
         "clang-format", -- Used for protobufs
+        "zls",
       },
     },
   },
