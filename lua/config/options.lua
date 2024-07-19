@@ -19,6 +19,7 @@ vim.filetype.add({
     job = "yaml", -- Used in palerts
     rasi = "rasi",
     alloy = "hcl",
+    service = "ini",
   },
   filename = {
     ["flake.lock"] = "json",
