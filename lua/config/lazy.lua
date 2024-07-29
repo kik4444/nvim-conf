@@ -7,6 +7,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 
+-- As of writing, Ruby LSP is flaky with its diagnostics and does not support type inference
+vim.g.lazyvim_ruby_lsp = "solargraph"
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
