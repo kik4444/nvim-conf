@@ -13,6 +13,7 @@ vim.filetype.add({
   pattern = {
     [".*/hypr/.*%.conf"] = "hyprlang",
     [".*/kitty/.*%.conf"] = "bash",
+    [".*/grafana/grafana_class.*"] = "yaml", -- Used in mon
   },
   extension = {
     nu = "nu",
