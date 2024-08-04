@@ -16,7 +16,6 @@ vim.filetype.add({
     [".*/grafana/grafana_class.*"] = "yaml", -- Used in mon
   },
   extension = {
-    nu = "nu",
     job = "yaml", -- Used in palerts
     rasi = "rasi",
     alloy = "hcl",

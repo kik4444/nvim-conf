@@ -37,15 +37,11 @@ end
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      { "nushell/tree-sitter-nu" },
-    },
     opts = {
       ensure_installed = {
         "nix",
         "hyprlang",
         "ini",
-        "nu",
         "ruby",
         "groovy",
         "puppet",
@@ -137,7 +133,6 @@ return {
         enabled = true,
       },
       servers = {
-        nu_ls = {}, -- Required
         nil_ls = {
           mason = false,
           settings = {
@@ -228,26 +223,6 @@ return {
           cmd = { "puppet-languageserver", "--stdio" },
         },
         pbls = {}, -- Protobuf
-      },
-      setup = {
-        nu_ls = function()
-          local configs = require("lspconfig.configs")
-
-          -- Check if the config is already defined (useful when reloading this file)
-          if not configs.nu_ls then
-            configs.nu_ls = {
-              default_config = {
-                cmd = { "nu", "--lsp" },
-                filetypes = { "nu" },
-                root_dir = require("lspconfig.util").find_git_ancestor,
-                single_file_support = true,
-                settings = {},
-              },
-            }
-          end
-
-          require("lspconfig").nu_ls.setup({})
-        end,
       },
     },
   },
