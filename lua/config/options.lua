@@ -20,6 +20,7 @@ vim.filetype.add({
     rasi = "rasi",
     alloy = "hcl",
     service = "ini",
+    epp = "puppet",
   },
   filename = {
     ["flake.lock"] = "json",
