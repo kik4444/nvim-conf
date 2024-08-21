@@ -42,7 +42,6 @@ return {
         "nix",
         "hyprlang",
         "ini",
-        "ruby",
         "groovy",
         "puppet",
         "html",
