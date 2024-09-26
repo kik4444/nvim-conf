@@ -26,6 +26,8 @@ require("lazy").setup({
 
     { import = "lazyvim.plugins.extras.util.startuptime" },
 
+    { import = "lazyvim.plugins.extras.lsp.neoconf" },
+
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.yaml" },
     { import = "lazyvim.plugins.extras.lang.markdown" },
