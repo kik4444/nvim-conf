@@ -158,6 +158,7 @@ return {
                 rangeVariableTypes = true,
               },
               analyses = {
+                fieldalignment = true,
                 unusedvariable = true,
                 shadow = true,
               },
