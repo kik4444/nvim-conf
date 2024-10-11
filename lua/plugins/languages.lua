@@ -67,6 +67,7 @@ return {
         "emmet-language-server",
         "clang-format", -- Used for protobufs
         "zls",
+        "elixir-ls",
       },
     },
   },
