@@ -133,10 +133,10 @@ return {
         enabled = true,
       },
       servers = {
-        nil_ls = {
+        nixd = {
           mason = false,
           settings = {
-            ["nil"] = {
+            nixd = {
               formatting = {
                 command = { "alejandra" },
               },
