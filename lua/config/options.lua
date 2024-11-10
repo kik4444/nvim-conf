@@ -17,7 +17,6 @@ vim.filetype.add({
   },
   extension = {
     job = "yaml", -- Used in palerts
-    rasi = "rasi",
     alloy = "hcl",
     service = "ini",
     epp = "puppet",
