@@ -23,8 +23,9 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 
 -- 2 spaces width for certain files
 vim.api.nvim_create_autocmd({ "BufRead" }, {
-  pattern = { "*.json", "*.jsonc", "*.pp", "*.job", "*.alloy" },
+  pattern = { "*.json", "*.jsonc", "*.yaml", "*.yml", "*.pp", "*.job", "*.alloy" },
   callback = function()
     vim.opt.shiftwidth = 2
   end,
+  desc = "Set shiftwidth to 2 for certain files",
 })
