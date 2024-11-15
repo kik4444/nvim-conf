@@ -42,6 +42,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.ruby" },
     { import = "lazyvim.plugins.extras.lang.nushell" },
     { import = "lazyvim.plugins.extras.lang.elixir" },
+    { import = "lazyvim.plugins.extras.lang.tailwind" },
 
     -- import/override with your plugins
     { import = "plugins" },
