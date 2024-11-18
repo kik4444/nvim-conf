@@ -14,6 +14,7 @@ vim.filetype.add({
     [".*/hypr/.*%.conf"] = "hyprlang",
     [".*/kitty/.*%.conf"] = "bash",
     [".*/grafana/grafana_class.*"] = "yaml", -- Used in mon
+    [".*job.erb"] = "yaml", -- Used in palerts
   },
   extension = {
     job = "yaml", -- Used in palerts
