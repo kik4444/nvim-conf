@@ -221,7 +221,7 @@ return {
         puppet = {
           cmd = { "puppet-languageserver", "--stdio" },
         },
-        pbls = {}, -- Protobuf
+        -- pbls = {}, -- Protobuf
         emmet_language_server = {
           filetypes = { "heex", "html", "javascriptreact", "svelte", "typescriptreact" },
         },
