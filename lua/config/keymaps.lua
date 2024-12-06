@@ -10,3 +10,14 @@ vim.keymap.set("i", "<S-Tab>", "<C-d>")
 
 -- Delete marks
 vim.keymap.set("n", "M", "<cmd>delmarks!<cr>", { desc = "Delete marks" })
+
+local key = "C"
+if vim.uv.os_uname().sysname == "Darwin" then
+  key = "D"
+end
+
+-- Resize window using Ctrl or Cmd + arrow keys
+vim.keymap.set("n", "<" .. key .. "-Up>", "<cmd>resize +5<cr>", { desc = "Increase Window Height" })
+vim.keymap.set("n", "<" .. key .. "-Down>", "<cmd>resize -5<cr>", { desc = "Decrease Window Height" })
+vim.keymap.set("n", "<" .. key .. "-Left>", "<cmd>vertical resize -5<cr>", { desc = "Decrease Window Width" })
+vim.keymap.set("n", "<" .. key .. "-Right>", "<cmd>vertical resize +5<cr>", { desc = "Increase Window Width" })
