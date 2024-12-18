@@ -23,7 +23,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
 
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
-    { import = "lazyvim.plugins.extras.coding.blink" },
 
     { import = "lazyvim.plugins.extras.util.startuptime" },
 
