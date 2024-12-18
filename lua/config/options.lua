@@ -28,3 +28,15 @@ vim.filetype.add({
     ["go.mod"] = "gomod", -- Sometimes gopls needs help
   },
 })
+
+vim.opt.list = true
+vim.opt.listchars = {
+  lead = "·",
+  trail = "•",
+  -- multispace = "∅",
+  nbsp = "‡",
+  tab = "» ",
+  precedes = "❮",
+  extends = "❯",
+  -- eol = "↵",
+}
