@@ -9,5 +9,8 @@ return {
 
     -- Open multiple selections in buffers instead of sending them to quickfix list.
     require("fzf-lua.config").defaults.actions.files.default = require("fzf-lua.actions").file_edit
+
+    -- Allow providing file globs to live_grep, e.g. "^foo -- *.lua"
+    opts.grep.rg_glob = true
   end,
 }
