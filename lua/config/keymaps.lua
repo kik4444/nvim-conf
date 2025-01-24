@@ -5,9 +5,6 @@
 -- Remap Ctrl + U to redo
 vim.keymap.set("n", "U", "<C-r>")
 
--- Deindent in insert mode with Shift + Tab
-vim.keymap.set("i", "<S-Tab>", "<C-d>")
-
 -- Delete marks
 vim.keymap.set("n", "M", "<cmd>delmarks!<cr>", { desc = "Delete marks" })
 
@@ -16,6 +13,8 @@ if vim.uv.os_uname().sysname == "Darwin" then
   key = "D"
 end
 
+vim.keymap.set({ "n", "i" }, "<A-s>", "<cmd>wa<cr>", { desc = "Save all" })
+
 -- Resize window using Ctrl or Cmd + arrow keys
 vim.keymap.set("n", "<" .. key .. "-Up>", "<cmd>resize +5<cr>", { desc = "Increase Window Height" })
 vim.keymap.set("n", "<" .. key .. "-Down>", "<cmd>resize -5<cr>", { desc = "Decrease Window Height" })
@@ -23,4 +22,6 @@ vim.keymap.set("n", "<" .. key .. "-Left>", "<cmd>vertical resize -5<cr>", { des
 vim.keymap.set("n", "<" .. key .. "-Right>", "<cmd>vertical resize +5<cr>", { desc = "Increase Window Width" })
 
 -- lazygit
-vim.keymap.set("n", "<leader>gf", function() Snacks.lazygit.log_file() end, { desc = "Lazygit Current File History" })
+vim.keymap.set("n", "<leader>gf", function()
+  Snacks.lazygit.log_file()
+end, { desc = "Lazygit Current File History" })
