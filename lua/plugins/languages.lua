@@ -48,7 +48,6 @@ return {
         "css",
         "proto",
         "hcl",
-        "zig",
       },
     },
   },
