@@ -297,7 +297,4 @@ return {
       },
     },
   },
-  {
-    "towolf/vim-helm", -- Helm syntax highlighting
-  },
 }
